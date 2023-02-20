@@ -12,6 +12,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.datetime)
     implementation(projects.common)
+    implementation("org.jsoup:jsoup:1.15.4")
 
     testImplementation(libs.kotlin.junit)
 }

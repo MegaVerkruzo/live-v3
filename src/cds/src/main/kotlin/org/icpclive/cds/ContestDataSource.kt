@@ -8,6 +8,7 @@ import org.icpclive.api.AnalyticsMessage
 import org.icpclive.api.ContestInfo
 import org.icpclive.api.RunInfo
 import org.icpclive.cds.adapters.*
+import org.icpclive.cds.atcoder.AtCoderDataSource
 import org.icpclive.cds.cats.CATSDataSource
 import org.icpclive.cds.clics.ClicsDataSource
 import org.icpclive.cds.codeforces.CFDataSource
@@ -81,6 +82,7 @@ fun getContestDataSource(
         "KRSU" -> KRSUDataSource(properties)
         "CATS" -> CATSDataSource(properties, creds)
         "NOOP" -> NoopDataSource()
+        "ATCODER" -> AtCoderDataSource(properties, creds)
         else -> throw IllegalArgumentException("Unknown standings.type $standingsType")
     }
 
